@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 90%;
+        width: 300px;
+      }
+
+      #data {
+        font-size: 18px;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+
+      button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+      
+      button:active {
+        background-color: #004080;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          width: 90%;
+        }
+
+        button {
+          padding: 12px;
+          font-size: 18px;
+        }
+      }
+    </style>
+    <script>
+      var dataList = [
+        "ElyziaVoss@gmail.com", 
+        "KaelanLark@gmail.com", 
+        "SableDraven@gmail.com", 
+        "MiztralDawn@gmail.com", 
+        "BryndenQuill@gmail.com", 
+        "CressidiaWren@gmail.com", 
+        "DamarisLynx@gmail.com", 
+        "ElowinFrost@gmail.com", 
+        "FeniwickJett@gmail.com", 
+        "HesperaShade@gmail.com", 
+        "KaelithDawn@gmail.com", 
+        "LioraCypress@gmail.com", 
+        "MarcelliusGale@gmail.com", 
+        "PhaedriaSky@gmail.com", 
+        "RiaineBlair@gmail.com", 
+        "ThorneVeisper@gmail.com", 
+        "CorianaElowis@gmail.com", 
+        "AlarickaDusk@gmail.com", 
+        "BellamyRouxya@gmail.com", 
+        "GinevraSable@gmail.com", 
+        "HalcyonNoxya@gmail.com", 
+        "JarethFenn@gmail.com", 
+        "KaelyanSky@gmail.com", 
+        "LiraelyaCove@gmail.com", 
+        "MarisyaNoble@gmail.com", 
+        "NyssaValem@gmail.com", 
+        "OriondaBloom@gmail.com", 
+        "PaxDahlia@gmail.com", 
+        "QuynlanStone@gmail.com", 
+        "RhiannonVoss@gmail.com", 
+        "SorenryaLark@gmail.com", 
+        "WynnShade@gmail.com"
+      ]; // Liste des données à copier
+      var currentIndex = 0;
+
+      function displayData() {
+        document.getElementById("data").innerText = dataList[currentIndex];
+      }
+
+      function copyToClipboard() {
+        var copyText = document.getElementById("data").innerText;
+        navigator.clipboard.writeText(copyText);
+        alert("Copié : " + copyText);
+      }
+
+      function nextData() {
+        if (currentIndex < dataList.length - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0; // Recommencer à zéro quand la liste est terminée
+        }
+        displayData();
+      }
+    </script>
+</head>
+<body onload="displayData()">
+    <div class="container">
+        <div id="data"></div>
+        <button onclick="copyToClipboard()">Copier</button>
+        <button onclick="nextData()">Suivant</button>
+    </div>
+</body>
+</html>
