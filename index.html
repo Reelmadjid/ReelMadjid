@@ -12,6 +12,7 @@
         align-items: center;
         height: 100vh;
         margin: 0;
+        padding: 0 20px;
       }
 
       .container {
@@ -20,7 +21,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
-        max-width: 90%;
+        max-width: 100%;
         width: 300px;
       }
 
@@ -71,6 +72,28 @@
         background-color: #004080;
       }
 
+      select {
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        background-color: #f4f4f4;
+        cursor: pointer;
+        appearance: none;
+        outline: none;
+      }
+
+      select:hover {
+        border-color: #007BFF;
+      }
+
+      select:focus {
+        border-color: #0056b3;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+
       a.button-link {
         display: inline-block;
         background-color: #28a745;
@@ -82,6 +105,7 @@
         margin-top: 20px;
         width: 100%;
         text-align: center;
+        box-sizing: border-box;
       }
 
       a.button-link:hover {
@@ -90,10 +114,15 @@
 
       @media (max-width: 600px) {
         .container {
-          width: 90%;
+          width: 100%;
         }
 
         button {
+          padding: 12px;
+          font-size: 18px;
+        }
+
+        select {
           padding: 12px;
           font-size: 18px;
         }
@@ -879,7 +908,7 @@ window.onload = function() {
 <button onclick="resetProgress()">Retour au début</button>
 
 <!-- Bouton pour accéder à hotjob.click -->
-<a href="https://hotjob.click" class="button-link" target="_blank">Hotjob.click</a>
+<a href="https://hotjob.click" class="button-link" target="_blank">Accéder à Hotjob.click</a>
 </div>
 </body>
 </html>
